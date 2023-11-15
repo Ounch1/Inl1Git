@@ -1,0 +1,14 @@
+1. När använder man add respektive commit?
+- You write add to add the files to the staging area, commit is for making a save point
+
+2. Vad är pull repektive push?
+- Push is sending the changes to a remote repository
+  Pull is for getting those changes from the remote repository to your local repository
+
+3. När använder man log respektive status?
+- Log is used to see the history of commits in your project,
+  status is to see the files in your staging area
+
+4. Vad är en Git branch och varför är de viktiga?
+- Git branch allows different developers to work in an isolated environment, for working on different features for instance. 
+  It keeps the changes separate until they are ready to be merged into the main branch
