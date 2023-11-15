@@ -12,3 +12,31 @@
 4. Vad är en Git branch och varför är de viktiga?
 - Git branch allows different developers to work in an isolated environment, for working on different features for instance. 
   It keeps the changes separate until they are ready to be merged into the main branch
+
+I'd be pretty happy if i were to get a VG:
+
+The two common methods to revert code is git revert and git reset
+
+git reset:
+
+Resets the current branch to a specified commit, discarding changes.
+When to Use: Use when you want to completely undo the commits after a certain point and discard those changes.
+Example Commands:
+
+git reset --hard <commit_hash>
+Output: The working directory and staging area are reverted to a specified commit, --hard discards changes irreversibly, but there is --soft and --mixed.
+
+git revert:
+
+Purpose: Creates a new commit that undoes changes made in a previous commit.
+When to Use: Use when you want to keep a record of the undo operation and maintain the commit history.
+Example Commands:
+
+git revert <commit_hash>
+git commit -m "Revert changes made in <commit_hash>"
+
+Output: A new commit is created that undoes the changes of the specified commit. This method is safer for shared branches as it doesn't rewrite history.
+
+
+
+
