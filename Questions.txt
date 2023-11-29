@@ -21,21 +21,38 @@ git reset:
 
 Resets the current branch to a specified commit, discarding changes.
 When to Use: Use when you want to completely undo the commits after a certain point and discard those changes.
+--hard discards changes irreversibly, but there is also --soft and --mixed.
+
 Example Commands:
 
 git reset --hard <commit_hash>
-Output: The working directory and staging area are reverted to a specified commit, --hard discards changes irreversibly, but there is --soft and --mixed.
+
+Output: 
+HEAD is now at e0c7828 Removing the .class files from the repository, adding a script file
 
 git revert:
 
 Purpose: Creates a new commit that undoes changes made in a previous commit.
 When to Use: Use when you want to keep a record of the undo operation and maintain the commit history.
+This method is safer for shared branches as it doesn't rewrite history.
+
 Example Commands:
 
 git revert <commit_hash>
 git commit -m "Revert changes made in <commit_hash>"
 
-Output: A new commit is created that undoes the changes of the specified commit. This method is safer for shared branches as it doesn't rewrite history.
+Output: 
+commit 453c3d2b5cfd46721472ba93c2a3b1720f67f9b5 (HEAD -> main)
+Author: Ilja <iliagrigorev15@gmail.com>
+Date:   Wed Nov 15 10:34:46 2023 +0100
+
+    Revert test
+
+commit e0c7828ecc4219076dcf8cfa2f2170f9fd5dee94
+Author: Ilja <iliagrigorev15@gmail.com>
+Date:   Tue Nov 14 18:31:56 2023 +0100
+
+Removing the .class files from the repository, adding a script file
 
 
 
